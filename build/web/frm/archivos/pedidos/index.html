@@ -1,0 +1,520 @@
+   <!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurante Paris!!!-Pedidos</title>
+     
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <link rel="stylesheet" href="../../../css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/animate.css">
+    
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../css/magnific-popup.css">
+
+    <link rel="stylesheet" href="../../../css/aos.css">
+
+    <link rel="stylesheet" href="../../../css/ionicons.min.css">
+
+    <link rel="stylesheet" href="../../../css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="../../../css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="../../../css/flaticon.css">
+    <link rel="stylesheet" href="../../../css/icomoon.css">
+    <link rel="stylesheet" href="../../../css/style.css">
+
+    </head>
+
+    <body>
+        <div class="date"><div class="local-date"</div></div>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+		      <a class="navbar-brand" href="../../../menu.html"><span class="flaticon-chef mr-1"></span>Restaurante<br><small>Paris</small></a>
+		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="oi oi-menu"></span> Menu
+		      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	       
+	          <li class="nav-item"><a href="../../../menu.html" class="nav-link">Menu Princ.</a></li>
+	          
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+        <div id="confirmar"></div>
+        <div id="buscar"></div>
+        <div id="panelPrograma" class="panel panel-primary">
+            <div class="panel-body">
+                <form style="position:absolute;left: 10%;" id="formPrograma">
+                     <div class="heading-section ftco-animate ">
+          <h2 class="mb-4"><span >PEDIDOS</span></h2>
+         
+        </div>
+                         
+                    <div form-group d-flex col-md-9>   
+                    <div style="position: absolute;top: 11%;left: 8%;" class="row">
+                        <div class="col-md-1">
+                            <span>Id:</span>
+                        </div>
+                       
+                        <div class="col-md-1">
+                            <input readonly="readondy" id="id_cliente" name="id_cliente" type="text"
+                                   class=" input-sm" placeholder="Id">
+                        </div>
+                        <div style="position: absolute;left: 85%; " class="col-md-1">
+                            <button id="botonBuscarIdCliente" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        </div>
+                        
+                    </div>   
+                    <div style="position: absolute;top: 10%;left: 31%;" class="row">
+                        <div class="col-md-3">
+                            <span>Nombre:</span>
+                        </div>
+                        <div class="col-md-2">
+                            <input readonly="readondy" id="nombre_cliente" name="nombre_cliente" class="input-sm" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div style="position: absolute;top: 10%;left: 52%;" class="row">
+                        <div class="col-md-3">
+                            <span>Apellido:</span>
+                        </div>
+                        <div class="col-md-9">
+                            <input readonly="readondy" id="apellido_cliente" name="apellido_cliente" class="input-sm " placeholder="Apellido">
+                        </div>
+                    </div>
+                     <div style="position: absolute;top: 20%;left: 31%;"  class="row">
+                        <div  class="col-md-3">
+                            <span>Direccion:</span>
+                        </div>
+                        <div class="col-md-9">
+                            <input readonly="readondy" id="direccion_cliente" name="direccion_cliente" class="input-sm" placeholder="Direccion">
+                        </div>
+                    </div>
+                    
+                     <div style="position: absolute;top: 20%;left: 4.5%;" class="row">
+                        <div class="col-md-3">
+                            <span>Cedula:</span>
+                        </div>
+                        <div class="col-md-3">
+                            <input readonly="readondy" id="cedula_cliente" name="cedula_cliente" class="input-sm" placeholder="Cedula">
+                        </div>
+                    </div>
+                    <div style="position: absolute;top: 20%;left:52%;" class="row">
+                        <div class="col-md-3">
+                            <span>Telefono:</span>
+                        </div>
+                        <div class="col-md-3">
+                            <input readonly="readondy" id="telefono_cliente" name="telefono_cliente" class="input-sm" placeholder="Telefono">
+                        </div>
+                    </div>
+                    </div>  
+    
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <hr>
+                         
+                     <div class="form-group d-flex col-md-9 " >
+                       <div class="row">
+                        <div class="col-md-9">
+                            <span>Platos</span>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <button id="botonBuscarIdPlato" type="button" class="btn btn-primary btn-sm" >
+                                <span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        </div>
+                        
+                    </div> 
+                      <div class="row">
+                        <div class="col-md-9">
+                            <span>Id:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="id_plato" name="id_plato" 
+                                   class="form-control input-sm" readonly="readondy">
+                        </div>
+                       
+                        
+                    </div> 
+                    
+                      <div class="row">
+                        <div class="col-md-9">
+                            <span>Clasificacion:</span>
+                        </div>
+                        <div class="col-md-11">
+                           <input  id="clasificacion" name="clasificacion"  class="form-control input-sm" readonly="readondy">
+                            
+                        </div>
+                    </div>
+                  
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <span>Descripcion</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="descripcion" name="descripcion" type="text" class="form-control input-sm" readonly="readondy" >
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-9">
+                            <span>Precio</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="precio" name="precio" type="text" class="form-control input-sm"  onkeyup="sumar()" onchange="sumar()" readonly="readondy">
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-9">
+                            <span>Cant</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="cant" name="cant" 
+                                   class="form-control input-sm" value="1" >
+                        </div>
+                            
+                          </div>
+                    <div class="pane-footer centrado">
+                     <button style="position: absolute;top: 35%;right: 5%;" id="botonExcuir" type="button" onclick="limpiarPlato()" class="btn btn-danger btn-sm" value="reset"> Excluir</button>
+                    </div>
+                     </div>
+                                
+                    <div class="form-group d-flex  col-md-9 " >
+                       <div class="row">
+                        <div class="col-md-9">
+                            <span>Postres</span>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <button id="botonBuscarIdPostre" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        </div>
+                        
+                    </div> 
+                         <div class="row">
+                        <div class="col-md-9">
+                            <span>Id:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="id_postre" name="id_postre" 
+                                   class="form-control input-sm" readonly="readondy">
+                        </div>
+                       
+                        
+                    </div> 
+                    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <span>Clasificacion:</span>
+                        </div>
+                        <div class="col-md-11">
+                           <input  id="clasificacion3" name="clasificacion"  class="form-control input-sm" readonly="readondy">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <span>Descripcion:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="descripcion3" name="descripcion"  class="form-control input-sm" readonly="readondy">
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-9">
+                            <span>Precio:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="precio3" name="precio"  class="form-control input-sm" onkeyup="sumar()" onchange="sumar()" readonly="readondy">
+                        </div>
+                    </div>
+                          <div class="row">
+                        <div class="col-md-9">
+                            <span>Cant</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="cant3" name="cant" 
+                                   class="form-control input-sm" value="1">
+                        </div>
+                            
+                          </div>
+                        <div class="pane-footer centrado">
+                         <button  style="position: absolute;top: 35%;right: 5%;" id="botonExcuir" type="button" onclick="limpiarPostre()" class="btn btn-danger btn-sm" value="reset"> Excluir</button>
+                        </div>    
+                        </div>
+                                
+                    
+                    
+                        <div  class="form-group d-flex col-md-9 " >
+                                    <div class="row" >
+                        <div class="col-md-9">
+                            <span>Bebidas</span>
+                        </div>
+                        
+                        <div class="col-md-11">
+                            <button id="botonBuscarIdBebida" type="button" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span> Buscar</button>
+                        </div>
+                      
+                    </div>
+                         <div class="row">
+                        <div class="col-md-9">
+                            <span>Id:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="id_bebida" name="id_bebida" 
+                                   class="form-control input-sm" readonly="readondy">
+                        </div>
+                       
+                        
+                    </div> 
+                    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <span>Clasificacion:</span>
+                        </div>
+                        <div class="col-md-11">
+                           <input  id="clasificacion2" name="clasificacion"  class="form-control input-sm" readonly="readondy">
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-9">
+                            <span>Descripcion:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="descripcion2" name="descripcion"  class="form-control input-sm" readonly="readondy">
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-md-9">
+                            <span>Precio:</span>
+                        </div>
+                        <div class="col-md-11">
+                            <input id="precio2" name="precio"  class="form-control input-sm"   onkeyup="sumar()" onchange="sumar()" readonly="readondy">
+                        </div>
+                    </div>
+                             <div class="row">
+                        <div class="col-md-9">
+                            <span>Cant</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input id="cant2" name="cant" 
+                                   class="form-control input-sm" value="1">
+                        </div>
+                            
+                            </div>
+                            <div class="pane-footer centrado">
+                            <button  style="position: absolute;top: 35%;right: 5%;" id="botonExcuir" type="button" onclick="limpiarBebida()" class="btn btn-danger btn-sm" value="reset"> Excluir</button>
+                            </div>
+                             <div style="position: absolute;top: 110%;left:10%;" class="row">
+                        <div class="col-md-3">
+                            <span>IVA 10%</span>
+                        </div>
+                        <div class="col-md-5">
+                            <input id="iva" name="iva" type="text" class="form-control input-sm" placeholder="IVA" readonly="readondy">
+                        </div>
+                    </div>
+                                 <div style="position: absolute;top: 110%;right: 40%;" class="row">
+                        <div class="col-md-3">
+                            <span>SubTotal:</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="subtotal" name="subtotal" type="text" class="form-control input-sm" placeholder="SubTotal" readonly="readondy">
+                        </div>
+                    </div>
+                             
+                                <div style="position: absolute;top: 110%;right: 20%; "class="row">
+                        <div class="col-md-3">
+                            <span>Total:</span>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <input id="total" name="total" type="text" class="form-control input-sm" placeholder="Total" readonly="readondy">
+                        </div>
+                                      </div>
+                                    <div class="pane-footer centrado">
+                    <button style="position: absolute;top: 112%;right: 15%; " id="botonCalcular" type="button" onclick="sumar()" class="btn btn-primary btn-lg">Calcular</button>
+                                </div>
+                              
+                        </div>
+                    <br>
+                    <br>
+                    <br>
+                         <div style="position: absolute;top: 30%;left: 4.5%;"class="row">
+                        <div class="col-md-3">
+                            <span>NºPedido:</span>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <input id="nropedido" name="nropedido" type="text" readonly="readondy" placeholder="Auto." onload="cargar_id()" class="input-sm" >
+                        </div>
+                                      </div>
+                    
+                    <div style="position: absolute;top: 30%;left: 31%;"class="row">
+                        <div class="col-md-3">
+                            <span>Fecha:</span>
+                        </div>
+                        <div style="position: absolute;top: 180%;left: 260%;"  class="row">
+                            <button id="botonBuscarPedido" type="button" class="btn btn-secondary btn-sm">
+                                <span class="glyphicon glyphicon-search"></span> Registros</button>
+                        </div>
+                        <div class="col-md-6">
+                            
+                            <input id="fecha" name="fecha" type="date"  class="input-sm" >
+                             <script>
+                              
+              var f=new Date();
+              document.write(f.getDate()+"/"+(f.getMont()+1)+"/"+f.getFullYear());
+            
+                             </script>
+               
+                        </div>
+                                      </div>
+                </form>
+                
+                        </div>
+               <div class="pane-footer centrado">
+                
+                <button style="position: absolute;top: 60%;right: 10%;" id="botonAgregar" type="button" class="btn btn-success btn-lg"> Generar Venta</button>
+               
+                 <button style="position: absolute;top: 70%;right:  11%;" id="botonEliminar" type="button" class="btn btn-danger btn-lg" 
+                        data-toggle="modal" data-target="#confirmarCancelar">Cancelar</button>
+                
+                <button  style="position: absolute;top: 80%;right:  12%;" id="botonSalir" type="button" class="btn btn-primary btn-lg"> Salir </button>
+                <div style="position: absolute;top: 86%;right: 13%;" id="mensajes" class="well well-sm centrado">Mensaje del Sistema.</div>
+            </div>
+        
+            </div>
+             <div class="modal fade" id="confirmarCancelar" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header centrado">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="MyModalLabel">Mensaje del Sistema</h4>
+                    </div>
+                    <div class="modal-body">
+                        ESTAS SEGURO DE CANCELAR...!!!
+                        
+                        
+                    </div>
+                    <div class="modal-footer centrado">
+                        <button id="botonCancel" type="button"  class="btn btn-primary btn btn-sm">
+                            SI
+                        </button>
+                        <button type="button" class="btn btn-primary btn btn-sm" data-dismiss="modal">
+                            NO
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                       
+   
+        <br>
+      
+    
+       <script src="../../../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../../../js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/funciones.js" type="text/javascript"></script>
+                 <script src="../../../js/jquery.min.js"></script>
+  <script src="../../../js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../../js/popper.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
+  <script src="../../../js/jquery.easing.1.3.js"></script>
+  <script src="../../../js/jquery.waypoints.min.js"></script>
+  <script src="../../../js/jquery.stellar.min.js"></script>
+  <script src="../../../js/owl.carousel.min.js"></script>
+  <script src="../../../js/jquery.magnific-popup.min.js"></script>
+  <script src="../../../js/aos.js"></script>
+  <script src="../../../js/jquery.animateNumber.min.js"></script>
+  <script src="../../../js/bootstrap-datepicker.js"></script>
+  <script src="../../../js/jquery.timepicker.min.js"></script>
+  <script src="../../../js/scrollax.min.js"></script>
+  <script src="../../../js/main.js"></script>
+        <script>
+            // verificarSesion(true);
+            //  $("#buscar").css("display", "none");
+ 
+            //validacion del boton agregar
+            $("#botonAgregar").on('click', function () {
+               // if(validarFormulario()){
+                agregarPedido();
+               //} 
+            });
+           
+            
+          //  $("#buscar").css("display", "none");
+          //  $("#id_plato").focus();
+           // $("#id_plato").focusout(function (event) {
+           //     buscarIdCliente();
+                //if ($("#id_plato").val("")){
+                // $("#id_plato").val("0");
+                // }
+           // });
+            // siguienteCampo("#id_plato", "#clasificacion", false);
+             // siguienteCampo("#clasificacion", "botonBuscarCliente", false);
+             $("#botonBuscarPedido").on('click', function () {
+                $("#buscar").load("buscarNombrePedido.html");
+                $("#buscar").fadeIn("slow");
+                $("#panelPrograma").fadeOut("slow");
+                
+             });    
+ 
+         $("#botonBuscarIdPlato").on('click', function () {
+                $("#buscar").load("buscarNombrePlato.html");
+                $("#buscar").fadeIn("slow");
+                $("#panelPrograma").fadeOut("slow");
+                
+             });
+            
+           $("#botonBuscarIdBebida").on('click', function () {
+                $("#buscar").load("buscarNombreBebida.html");
+                $("#buscar").fadeIn("slow");
+                $("#panelPrograma").fadeOut("slow");
+                
+             });
+             $("#botonBuscarIdPostre").on('click', function () {
+                $("#buscar").load("buscarNombrePostre.html");
+                $("#buscar").fadeIn("slow");
+                $("#panelPrograma").fadeOut("slow");
+                
+             });
+             $("#botonBuscarIdCliente").on('click', function () {
+                $("#buscar").load("buscarNombreCliente.html");
+                $("#buscar").fadeIn("slow");
+                $("#panelPrograma").fadeOut("slow");
+                
+             });
+    $("#botonCancel").on('click', function(){
+                  location.href= "index.html";
+            
+            });
+            
+ $("#botonModificar").on('click', function(){
+   //  if (validarFormulario()){
+         modificarPlato();
+   //  }
+     
+ });
+ 
+ $("#botonSalir").on('click', function(){
+    location.href= "../../../menu.html";
+   
+ });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<div id="panelBuscar" class="panel panel-danger">
+    <div class="panel-heading centrado"> Buscar Postres </div>
+    <div class="panel-body">
+        <form id="formBuscar">
+            <input type="hidden" id="bpagina" name="bpagina" value="1"/>
+            <div class="row">
+                <div class="col-md-1">
+                    <span>Nombre</span>
+                </div>
+                <div class="col-md-9">
+                    <input id="bcalsificacion" name="bclasificacion" type="text"
+                           class="form-control input-sm" placeholder="Nombre">
+                </div>
+                <div class="col-md-2">
+                    <button id="botonBuscar" type="button" class="btn btn-primary btn-lg">Buscar</button>
+                </div>
+            </div>
+        </form>    
+        <br>
+        <div id="resultado">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Clasificacion</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                    </tr>
+
+                </thead>
+                <tbody id="contenidoBusqueda">             
+                </tbody>
+            </table>
+          
+        </div>
+    </div>
+    <div class="panel-footer centrado">
+     <button onclick="location.href='index.html'" id="botonSalirBuscar" type="button" class="btn btn-primary btn-sm">Salir</button>
+    </div>  
+    <script>
+         buscarClasificacionPostre()
+   
+        //$("#bclasificacion").focus();
+      //  siguienteCampo("#bnombre_cliente", "@botonBuscar", false);
+        $("#botonBuscar").on("click", function () {
+          //  $("#contenidoBusqueda").html("");
+           // $("#bpagina").val("1");
+            buscarClasificacionPostre();
+           // $("#bnombre_cliente").focus();
+        });
+
+        
+    </script>
+</div>
+
+
+
+
